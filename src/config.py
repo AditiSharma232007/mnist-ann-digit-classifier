@@ -1,0 +1,26 @@
+from pathlib import Path
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
+MODEL_DIR = PROJECT_ROOT / "models"
+ARTIFACT_DIR = PROJECT_ROOT / "artifacts"
+PLOT_DIR = ARTIFACT_DIR / "plots"
+
+MODEL_PATH = MODEL_DIR / "mnist_ann.keras"
+METRICS_PATH = ARTIFACT_DIR / "metrics.json"
+TRAINING_HISTORY_PLOT = PLOT_DIR / "training_history.png"
+CONFUSION_MATRIX_PLOT = PLOT_DIR / "confusion_matrix.png"
+
+IMAGE_HEIGHT = 28
+IMAGE_WIDTH = 28
+INPUT_UNITS = IMAGE_HEIGHT * IMAGE_WIDTH
+NUM_CLASSES = 10
+
+TRAIN_SAMPLES = 50_000
+TEST_SAMPLES = 10_000
+BATCH_SIZE = 32
+EPOCHS = 10
+VALIDATION_SPLIT = 0.1
+RANDOM_SEED = 42
+
